@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sizzle &amp; Serve — Rush Hour Kitchen</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <header id="topbar">
+    <div class="brand">🍳 Sizzle &amp; Serve</div>
+    <div class="shift">
+      <span id="timer" class="timer">03:00</span>
+      <span id="hearts" class="hearts">❤❤❤</span>
+    </div>
+    <div class="scores">
+      <span>Score <b id="score">0</b></span>
+      <span>Combo <b id="combo">×1</b></span>
+      <span>Served <b id="served">0</b></span>
+    </div>
+  </header>
+
+  <section id="board" aria-label="Order board">
+    <div class="board-label">ORDER BOARD</div>
+    <div id="tickets"></div>
+  </section>
+
+  <main id="kitchen">
+    <section id="grill-box" aria-label="Grill">
+      <div class="zone-label">GRILL — click a raw patty to start cooking</div>
+      <div id="grill"></div>
+      <div class="hint">Patties cook in ~6s. Pull them off before they burn!</div>
+    </section>
+
+    <section id="plate-box" aria-label="Assembly plate">
+      <div class="zone-label">YOUR PLATE — build the ticket's dish, bottom to top</div>
+      <div id="plate"></div>
+      <div id="plate-actions">
+        <button id="serve-btn" type="button">SERVE 🍽️</button>
+        <button id="trash-btn" type="button">TRASH 🗑️</button>
+      </div>
+      <div id="toast"></div>
+    </section>
+
+    <section id="counter" aria-label="Ingredient counter">
+      <div class="zone-label">COUNTER — click or press 1–6</div>
+      <div id="bins"></div>
+    </section>
+  </main>
+
+  <footer id="help">
+    Keys: <b>1</b> bun-bottom · <b>2</b> patty · <b>3</b> cheese · <b>4</b> lettuce ·
+    <b>5</b> tomato · <b>6</b> bun-top · <b>S</b> serve · <b>T</b> trash · <b>R</b> restart
+  </footer>
+
+  <div id="overlay" class="hidden">
+    <div id="overlay-card"></div>
+  </div>
+</div>
+<script src="game.js"></script>
+</body>
+</html>
